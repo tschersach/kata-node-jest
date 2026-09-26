@@ -1,4 +1,5 @@
-import { hello, MSG } from '../src'
+import { expect, it } from 'vitest'
+import { hello, MSG } from '../src/index.js'
 
 it('return Hello', () => {
   // Given

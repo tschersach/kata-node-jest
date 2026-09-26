@@ -1,27 +1,53 @@
 # Kata Node.js Starter Project
 
-__A starter project for coding kata in Node.js.__
-
-Minimal Node.js Starter for coding katas.
+Minimal Node.js starter for coding katas, using native ES modules.
 
 ## Tools
-- Jest for testing
-- Babel to enable nice things like `import` in Node
+
+- [Vitest](https://vitest.dev/) for testing
+- [pnpm](https://pnpm.io/) for dependency management
 
 ## Getting Started
 
-### Install dependencies
+### Prerequisites
 
-Before starting to code, don't forget to install all dependencies.
+Use Node.js 24 LTS. The supported Node.js versions are declared in `package.json`.
+
+Install the pinned pnpm version:
 
 ```shell
-yarn
+npm install --global pnpm@12.6.0
 ```
 
-### Running tests
+### Install dependencies
+
+```shell
+pnpm install
+```
+
+Dependencies must be at least 24 hours old. pnpm enforces this release-age
+policy in strict mode, with no package exceptions.
+
+### Run tests
 
 Run all tests once:
 
 ```shell
-yarn test
+pnpm test
+```
+
+Watch for changes and rerun affected tests:
+
+```shell
+pnpm test:watch
+```
+
+Write tests in `tests/*.test.js`, import test helpers from `vitest`, and include
+the `.js` extension in relative imports. See `tests/index.test.js` for an example.
+
+For a reproducible install in CI:
+
+```shell
+pnpm install --frozen-lockfile
+pnpm test
 ```

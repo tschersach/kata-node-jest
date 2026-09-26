@@ -1,6 +1,10 @@
 # Dependency directories
 node_modules/
 
+# Vitest reports and artifacts
+.vitest/
+coverage/
+
 .idea
 
 # Logs
